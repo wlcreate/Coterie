@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   patch '/users/:id', to: "users#update" #actually updates info
   delete '/users/:id', to: "users#destroy" #deletes user account
 
+  #meetings
+  get '/meetings', to: "meetings#index", as: "meetings" #all the meetings
+
+  #categories
+  get '/categories', to: "categories#index", as: "categories" #all the categories
+
 end
