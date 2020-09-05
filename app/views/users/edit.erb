@@ -1,12 +1,4 @@
-<h1> Form for New User </h1>
-
-<% if @errors %>
-<ul>
-    <% @errors.each do |error| %>
-    <li><%= error %></li>
-    <% end %>
-</ul>
-<% end%>
+<h1> Edit <%= @user.full_name%>'s Profile </h1>
 
 <%= form_for @user do |f| %>
     <%= f.label :first_name %>
@@ -15,7 +7,7 @@
     <%= f.text_field :last_name %> <br>
     <%= f.label :username %>
     <%= f.text_field :username %> <br>
-    <%= f.label :password %>
-    <%= f.password_field :password %> <br>
-    <%= f.submit "Create Account!" %>
+    <%= f.label :bio %>
+    <%= f.text_area :bio %> <br>
+    <%= f.submit "Update" %>
     <% end %>
