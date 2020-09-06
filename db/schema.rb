@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 2020_09_04_224555) do
     t.text "description"
     t.datetime "time"
     t.bigint "subcategory_id", null: false
+    t.bigint "category_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_meetings_on_category_id"
     t.index ["subcategory_id"], name: "index_meetings_on_subcategory_id"
     t.index ["user_id"], name: "index_meetings_on_user_id"
   end
@@ -60,6 +62,7 @@ ActiveRecord::Schema.define(version: 2020_09_04_224555) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "meetings", "categories"
   add_foreign_key "meetings", "subcategories"
   add_foreign_key "meetings", "users"
   add_foreign_key "registrations", "meetings"
