@@ -14,6 +14,10 @@ class MeetingsController < ApplicationController
 
     def create
         @meeting = Meeting.create(meeting_params)
+        redirect_to meeting_path(@meeting)
+    end
+
+    def show
     end
 
 

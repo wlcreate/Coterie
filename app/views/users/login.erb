@@ -1,0 +1,11 @@
+<% if @error %>
+<p><%= @error %></p>
+<% end %>
+
+    <%= form_tag "/send_form_here" do %>
+    <%= label_tag :username %>
+    <%= text_field_tag :username %><br>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+    <%= submit_tag "Login"%>
+<% end %>

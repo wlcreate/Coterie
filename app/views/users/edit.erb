@@ -1,6 +1,6 @@
-<h1> Edit <%= @user.full_name%>'s Profile </h1>
+<h1> Edit <%= @current_user.full_name%>'s Profile </h1>
 
-<%= form_for @user do |f| %>
+<%= form_for @current_user do |f| %>
     <%= f.label :first_name %>
     <%= f.text_field :first_name %> <br>
     <%= f.label :last_name %>
