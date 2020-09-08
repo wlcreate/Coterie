@@ -1,2 +1,8 @@
 <h1> This is all of the Meetings! </h1>
 
+<% @meetings.each do |meeting| %>
+<li><%= meeting.category %><br>
+<%= meeting.subcategory %><br>
+<%= meeting.title %><br>
+<%= meeting.time %><br></li>
+<% end %>

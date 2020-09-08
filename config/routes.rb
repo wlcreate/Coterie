@@ -14,8 +14,8 @@ Rails.application.routes.draw do
 
   #meetings
   get '/meetings', to: "meetings#index", as: "meetings" #all the meetings
-  get '/meetings/new', to: "meetings#new", as: "new_meeting" #create meeting
   post '/meetings', to: "meetings#create"
+  get '/meetings/new', to: "meetings#new", as: "new_meeting" #create meeting
   get '/meetings/:id', to: "meetings#show", as: "meeting"
 
   #categories

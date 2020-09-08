@@ -13,7 +13,10 @@ class MeetingsController < ApplicationController
     end
 
     def create
+        @categories = Category.all
+        @subcategories = Subcategory.all
         @meeting = Meeting.create(meeting_params)
+        @meeting[:user_id] = @current_user.id
         redirect_to meeting_path(@meeting)
     end
 
@@ -28,7 +31,7 @@ class MeetingsController < ApplicationController
     end
 
     def meeting_params
-        params.require(:meeting).permit(:title, :description, :time, :subcategory_id, :user_id)
+        params.require(:meeting).permit(:title, :description, :time, :subcategory)
     end
 
 end

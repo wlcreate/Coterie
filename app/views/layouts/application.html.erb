@@ -14,7 +14,7 @@
 
   <% if check_if_user_is_logged_in %>
     <nav>
-      LOGGED IN AS: <%= @current_user.full_name %>
+      Logged In as: <%= @current_user.full_name %>
       <%= button_to "Log Out", logout_path, method: :delete%>
     </nav>
   <% else %>

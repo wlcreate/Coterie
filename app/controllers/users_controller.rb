@@ -48,12 +48,12 @@ class UsersController < ApplicationController
     end
 
 
-
     def edit 
     end
 
     def update
         @current_user.update(user_params)
+ ############## IT DOESN'T SEEM LIKE IT'S ACTUALLY UPDATING ###################
         redirect_to user_path(@current_user)
     end
 
@@ -69,7 +69,6 @@ class UsersController < ApplicationController
     end
 
     def get_user
-        # @user = User.find(params[:id])
         @current_user = User.find_by(id: session[:user_id])
     end
 
