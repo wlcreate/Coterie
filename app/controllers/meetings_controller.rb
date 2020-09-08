@@ -17,6 +17,7 @@ class MeetingsController < ApplicationController
         @subcategories = Subcategory.all
         @meeting = Meeting.create(meeting_params)
         @meeting[:user_id] = @current_user.id
+        ############# when host creates meeting ==> Registration.new(@meeting.id + @current_user.id)
         redirect_to meeting_path(@meeting)
     end
 
