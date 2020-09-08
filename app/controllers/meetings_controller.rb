@@ -17,7 +17,10 @@ class MeetingsController < ApplicationController
         @subcategories = Subcategory.all
         @meeting = Meeting.create(meeting_params)
         @meeting[:user_id] = @current_user.id
-        ############# when host creates meeting ==> Registration.new(@meeting.id + @current_user.id)
+        ##### why isn't meeting being saved in the database???
+        ##### once the issue is fixed //next step:
+        ##### register the host as an attendee to the meeting
+        ##### Registration.new(:meeting_id = @meeting.id, user_id = @current_user.id)
         redirect_to meeting_path(@meeting)
     end
 
