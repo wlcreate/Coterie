@@ -6,4 +6,6 @@ class CategoriesController < ApplicationController
         @meetings = Meeting.all
     end
 
+
+
 end

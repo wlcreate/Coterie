@@ -6,25 +6,38 @@ class MeetingsController < ApplicationController
         @meetings = Meeting.all
     end
     
-    def newcat
+    def new
         @categories = Category.all
-        # redirect_to new_subcategory_path
-    end
-
-
-
-    def create_cat
-        @categories = Category.all
-        # @meeting[:category_id] = 
-    end
-
-
-
-    def newsubcat
-        @category = Category.find_by(params[:category_id])
-        @subcategories = Subcategory.all
         @meeting = Meeting.new
     end
+
+    def get_category
+        # cat_selected = params[:meeting][:category_id]
+        # @categories = Category.all
+        # @category = Category.find_by_id(cat_selected)
+        @meeting = Meeting.create(meeting_params)
+        redirect_to meeting_form_path(@meeting)
+    end
+
+
+
+
+
+    def meeting_form
+        @category = Category.find_by(id: params[:id])
+    end
+
+
+
+
+
+
+    def create
+    byebug
+    @meeting = Meeting.create(meeting_params)
+    end
+
+
 
 
 
@@ -42,18 +55,28 @@ class MeetingsController < ApplicationController
 
 
 
+
+
+
     def show
     end
 
 
+
+
     private
+
+
 
     def get_meeting
         @meeting = Meeting.find(params[:id])
     end
 
+
+
+    
     def meeting_params
-        params.require(:meeting).permit(:title, :description, :time, :subcategory)
+        params.require(:meeting).permit(:title, :description, :time, :category)
     end
 
 end

@@ -1,0 +1,8 @@
+<h1>Select Subcategory:</h1>
+
+
+<%= form_for @meeting, do |f| %>
+<%= f.label :subcategory %> 
+<%= f.collection_select :subcategories, @category.subcategories, :id, :name %><br>
+<%= f.submit "Create Meeting"%>
+<% end %>
