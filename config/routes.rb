@@ -14,9 +14,15 @@ Rails.application.routes.draw do
 
   #meetings
   get '/meetings', to: "meetings#index", as: "meetings" #all the meetings
-  post '/meetings', to: "meetings#create"
-  get '/meetings/new', to: "meetings#new", as: "new_meeting" #create meeting
+  get '/meetings/newcat', to: "meetings#newcat", as: "new_category" #create meeting
+  post '/meetings/newcat', to: "meetings#create_cat"
+  get '/meetings/newsubcat', to: "meetings#newsubcat", as: "new_subcategory"
+  post '/meetings', to: "meetings#create_subcat"
+  
   get '/meetings/:id', to: "meetings#show", as: "meeting"
+
+
+
 
   #categories
   get '/categories', to: "categories#index", as: "categories" #all the categories

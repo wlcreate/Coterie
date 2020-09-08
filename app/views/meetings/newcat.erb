@@ -1,0 +1,16 @@
+<h1>Select A Category:</h1>
+
+
+<%#= form_for @meeting do |f| %>
+<%#= f.label :category %> <%#this list is way too long. parse through category first.%>
+<%#= f.collection_select :category_id, @categories, :id, :name %>
+<%#= f.submit "Next"%>
+<%# end %>
+
+
+    <% form_tag(:action => 'newsubcat')%>
+    <%= label_tag "Category" %>
+    <%#= text_field_tag :category_id %>
+    <%= collection_select :category, :id, Category.all, :id, :name %>
+    <%= submit_tag "Next" %>
+<% end %>

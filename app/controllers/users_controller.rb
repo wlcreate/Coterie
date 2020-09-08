@@ -52,13 +52,15 @@ class UsersController < ApplicationController
     end
 
     def update
-        @current_user.update(user_params)
- ############## IT DOESN'T SEEM LIKE IT'S ACTUALLY UPDATING ###################
-        redirect_to user_path(@current_user)
+        if @current_user.authenticate(params[:user][:password]) && @current_user.update(user_params)
+            redirect_to user_path(@current_user)
+        else
+            redirect_to edit_user_path(@current_user)
+        end
     end
 
     def destroy
-        @user.destroy
+        @current_user.destroy
         redirect_to new_user_path
     end
 

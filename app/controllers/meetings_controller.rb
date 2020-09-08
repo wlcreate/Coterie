@@ -6,13 +6,29 @@ class MeetingsController < ApplicationController
         @meetings = Meeting.all
     end
     
-    def new
-        @meeting = Meeting.new
+    def newcat
         @categories = Category.all
-        @subcategories = Subcategory.all
+        # redirect_to new_subcategory_path
     end
 
-    def create
+
+
+    def create_cat
+        @categories = Category.all
+        # @meeting[:category_id] = 
+    end
+
+
+
+    def newsubcat
+        @category = Category.find_by(params[:category_id])
+        @subcategories = Subcategory.all
+        @meeting = Meeting.new
+    end
+
+
+
+    def create_subcat
         @categories = Category.all
         @subcategories = Subcategory.all
         @meeting = Meeting.create(meeting_params)
@@ -23,6 +39,8 @@ class MeetingsController < ApplicationController
         ##### Registration.new(:meeting_id = @meeting.id, user_id = @current_user.id)
         redirect_to meeting_path(@meeting)
     end
+
+
 
     def show
     end
