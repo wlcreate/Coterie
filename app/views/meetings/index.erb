@@ -1,8 +1,18 @@
-<h1> This is all of the Meetings! </h1>
+<h1> Here is all of your meetings! </h1>
 
-<% @meetings.each do |meeting| %>
-<li><%= meeting.category %><br>
-<%= meeting.subcategory %><br>
-<%= meeting.title %><br>
-<%= meeting.time %><br></li>
-<% end %>
+<div>
+    <p> Meetings you are hosting: </p>
+    <ul>
+    <% @meetings.each do |meeting| %>
+    <li> Title: <%= link_to meeting.title, edit_meeting_path(@current_user, meeting) %> - when? <%= meeting.time %><br></li>
+    <% end %>
+    </ul>
+</div>
+<div>
+    <p> Meetings you are attending: </p>
+    <ul>
+        <% @registrations.each do |registration| %>
+        <li> Title: <%= link_to registration.meeting.title, edit_registration_path(@current_user, registration) %> - when? <%= registration.meeting.time %><br></li>
+        <% end %>
+    </ul>
+</div>

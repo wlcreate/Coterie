@@ -3,7 +3,8 @@ class MeetingsController < ApplicationController
     before_action :get_meeting, only: [:show, :edit, :update, :destroy]
 
     def index
-        @meetings = Meeting.all
+        @meetings = @current_user.meetings
+        @registrations = @current_user.registrations
     end
     
     def new
@@ -32,14 +33,23 @@ class MeetingsController < ApplicationController
         hour = params[:meeting]["time(4i)"].to_i
         minute = params[:meeting]["time(5i)"].to_i
         @time = DateTime.new(year, month, day, hour, minute)
-
         @meeting = Meeting.create(title: @title, description: @description, time: @time, subcategory: @subcategory, category: @category, user: @current_user)
-
+        
         redirect_to meeting_path(@meeting)
     end
 
     def show
         flash[:meeting_id] = params[:id]
+    end
+
+    def edit
+        
+    end
+
+    def update
+        byebug
+        @meeting.update(meeting_params)
+        redirect_to user_meetings_path(@current_user)
     end
 
     private

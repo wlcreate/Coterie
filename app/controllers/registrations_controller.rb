@@ -14,6 +14,8 @@ class RegistrationsController < ApplicationController
         redirect_to user_path(@current_user)
     end
 
+    
+
     private
 
     def reg_params
