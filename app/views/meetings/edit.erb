@@ -1,6 +1,6 @@
 <h1> Edit a Meeting! </h1>
 
-<%= form_for([@user, @meeting]) do |f| %>
+<%= form_for([@meeting.user, @meeting]) do |f| %>
 <%= f.hidden_field :user_id, :value => @current_user.id %>
 <%= f.label :title %>
 <%= f.text_field :title %><br>
@@ -10,3 +10,5 @@
 <%= f.datetime_select(:time, :default => { :hour => 23, :minute => 59 }) %><br>
 <%= f.submit "Update Meeting"%>
 <% end %>
+
+<%= button_to 'Delete Meeting', { controller: :meetings, action: :destroy, id: @meeting.id }, method: :delete, data: { confirm: 'Are you sure?' } %>

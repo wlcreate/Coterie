@@ -3,7 +3,17 @@ class MeetingsController < ApplicationController
     before_action :get_meeting, only: [:show, :edit, :update, :destroy]
 
     def index
-        @meetings = @current_user.meetings
+        # meeting.user = host
+        # meeting.users = attendees
+
+        # 1. need to go through a specific meeting to find the host of the meeting
+        #     we map over all the meetings
+        #     if meeting.user == @current_user
+        #         then list the meeting title & time
+        # 2. need to go through a specific meeting to find the attendees of the meeting
+
+
+        @meetings = Meeting.all
         @registrations = @current_user.registrations
     end
     
@@ -49,6 +59,11 @@ class MeetingsController < ApplicationController
     def update
         byebug
         @meeting.update(meeting_params)
+        redirect_to user_meetings_path(@current_user)
+    end
+    
+    def destroy
+        @meeting.destroy
         redirect_to user_meetings_path(@current_user)
     end
 

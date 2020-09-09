@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  root "homepage#home" 
+
   #users  
-  get "/users", to: "users#login", as: "login"
+  get "/login", to: "users#login", as: "login"
   get '/users/new', to: "users#new", as: "new_user" #form to create a user
   post '/users', to: "users#create" #actually create users
   get '/users/:id', to: "users#show", as: "user" #individual page/profile
@@ -14,7 +16,7 @@ Rails.application.routes.draw do
   
   get '/users/:user_id/meetings', to: "meetings#index", as: "user_meetings" #all of a user's meetings (host & attendee)
   get '/users/:user_id/meetings/:id/edit', to: "meetings#edit", as: "edit_meeting" #form for host to update title, desc, time
-  patch '/users/:user_id/meetings/:id', to: "meetings#update" #actually updates the meeting info
+  patch '/users/:user_id/meetings/:id', to: "meetings#update", as: "user_meeting" #actually updates the meeting info
   delete 'users/:user_id/meetings/:id', to: "meetings#destroy" #deletes the meeting
 
   get '/users/:user_id/registrations/:id/edit', to: "registrations#edit", as: "edit_registration" #form for attendee to change if they are attending; will display all meeting/registration info

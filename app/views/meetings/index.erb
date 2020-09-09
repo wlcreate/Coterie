@@ -4,7 +4,9 @@
     <p> Meetings you are hosting: </p>
     <ul>
     <% @meetings.each do |meeting| %>
-    <li> Title: <%= link_to meeting.title, edit_meeting_path(@current_user, meeting) %> - when? <%= meeting.time %><br></li>
+        <% if meeting.user == @current_user %>
+            <li> Title: <%= link_to meeting.title, edit_meeting_path(@current_user, meeting) %> - When? <%= meeting.time %><br></li>
+        <% end %>
     <% end %>
     </ul>
 </div>
@@ -12,7 +14,7 @@
     <p> Meetings you are attending: </p>
     <ul>
         <% @registrations.each do |registration| %>
-        <li> Title: <%= link_to registration.meeting.title, edit_registration_path(@current_user, registration) %> - when? <%= registration.meeting.time %><br></li>
+        <li> Title: <%= link_to registration.meeting.title, edit_registration_path(@current_user, registration) %> - When? <%= registration.meeting.time %><br></li>
         <% end %>
     </ul>
 </div>
