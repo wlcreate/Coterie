@@ -1,8 +1,8 @@
 class Meeting < ApplicationRecord
   belongs_to :subcategory
   belongs_to :category
-  belongs_to :user, dependent: :destroy #hosts
-  has_many :registrations
+  belongs_to :user #hosts
+  has_many :registrations, dependent: :destroy
   has_many :users, through: :registrations, dependent: :destroy #attendees
 
 

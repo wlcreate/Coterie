@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Meeting.destroy_all
+Subcategory.destroy_all
 User.destroy_all
 Category.destroy_all
-Subcategory.destroy_all
-Meeting.destroy_all
 
+Meeting.reset_pk_sequence
+Subcategory.reset_pk_sequence
 User.reset_pk_sequence
 Category.reset_pk_sequence
-Subcategory.reset_pk_sequence
-Meeting.reset_pk_sequence
 
 ###Users###
 

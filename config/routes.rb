@@ -22,7 +22,10 @@ Rails.application.routes.draw do
   get '/meetings/:id', to: "meetings#show", as: "meeting" #specific meeting info
 
   #categories
-  get '/categories', to: "categories#index", as: "categories" #all the categories
-  get '/categories/:id', to: "categories#show", as: "category"
+  get '/categories', to: "categories#index", as: "categories" #all the categories; our welcome page
+  get '/categories/:id', to: "categories#show", as: "category" 
+
+  #subcategories
+  get '/subcategories', to: "subcategories#index", as: "subcategories" #all the subcategories
 
 end

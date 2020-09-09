@@ -1,7 +1,9 @@
 <h1> Welcome Page! </h1>
 
-<ul>
-    <% @categories.map do |category| %>
-        <li> <%= category.name %> </li>
-    <% end %>
-</ul>
+<% @categories.map do |category| %>
+    <%= category.name %>
+    <% byebug %>
+    <ul>
+        <li> <%= category.subcategories %> </li>
+    </ul>
+<% end %>
