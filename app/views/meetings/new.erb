@@ -1,7 +1,7 @@
-<h1>Select A Category:</h1>
+<h1> Before we get started, select a category! </h1>
 
-<%= form_for @meeting do |f| %>
-<%= f.label :category %> <%#this list is way too long. parse through category first.%>
-<%= f.collection_select :category_id, @categories, :id, :name %><br>
-<%= f.submit "Next"%>
+<%= form_tag("/meetings/new/form", :method => "get") do %>
+<%= label_tag :category %>
+<%= select_tag(:category_id, options_for_select(@categories.map {|category| category.name})) %><br>
+<%= submit_tag("Next")%>
 <% end %>

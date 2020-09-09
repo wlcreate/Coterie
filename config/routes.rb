@@ -14,12 +14,12 @@ Rails.application.routes.draw do
 
   #meetings
   get '/meetings', to: "meetings#index", as: "meetings" #all the meetings
-  get '/meetings/new', to: "meetings#new", as: "new_meeting" #create meeting
-  post '/meetings', to: "meetings#get_category"
-  get '/meetings/:id', to: "meetings#show", as: "meeting"
-  post '/categories/:id/meetings', to: "meetings#create", as: "create_meeting"
-  patch '/meetings/:id/form', to: "meetings#meeting_form", as: "meeting_form"
-  
+  get '/meetings/new', to: "meetings#new", as: "new_meeting" #choose category to create meeting
+  get '/meetings/new/form', to: "meetings#meeting_form", as: "meeting_form" #form to create meeting
+  post '/meetings', to: "meetings#create" #creates meeting
+  # post '/meetings', to: "meetings#create" #actually creates the meeting
+  #post '/meetings/:id/form', to: "meetings#meeting_form", as: "meeting_form"
+  get '/meetings/:id', to: "meetings#show", as: "meeting" #specific meeting info
 
   #categories
   get '/categories', to: "categories#index", as: "categories" #all the categories

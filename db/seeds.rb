@@ -9,6 +9,12 @@
 User.destroy_all
 Category.destroy_all
 Subcategory.destroy_all
+Meeting.destroy_all
+
+User.reset_pk_sequence
+Category.reset_pk_sequence
+Subcategory.reset_pk_sequence
+Meeting.reset_pk_sequence
 
 ###Users###
 
@@ -43,6 +49,39 @@ writing = Category.create(name: "Writing")
 #################################################################################################################
 
 #subcategories
+musical_theatre = Subcategory.create(name: "Musical Theatre", category_id: arts_culture.id)
+performing_arts = Subcategory.create(name: "Performing Arts", category_id: arts_culture.id)
+art_galleries = Subcategory.create(name: "Art Galleries", category_id: arts_culture.id)
+cultural_activities = Subcategory.create(name: "Cultural Activities", category_id: arts_culture.id)
+art_museums = Subcategory.create(name: "Art Museums", category_id: arts_culture.id)
+illustration = Subcategory.create(name: "Illustration", category_id: arts_culture.id)
+mixed_media = Subcategory.create(name: "Mixed Media Art", category_id: arts_culture.id)
+digital_art = Subcategory.create(name: "Digital Art", category_id: arts_culture.id)
+improv = Subcategory.create(name: "Improv", category_id: arts_culture.id)
+storytelling = Subcategory.create(name: "Storytelling", category_id: arts_culture.id)
+
+african_american = Subcategory.create(name: "African-American Authors", category_id: book_clubs.id)
+classics = Subcategory.create(name: "Classic Books", category_id: book_clubs.id)
+novels = Subcategory.create(name: "Novel Reading", category_id: book_clubs.id)
+coffee_books = Subcategory.create(name: "Coffee & Books", category_id: book_clubs.id)
+book_swap = Subcategory.create(name: "Book Swap", category_id: book_clubs.id)
+fiction = Subcategory.create(name: "Fiction", category_id: book_clubs.id)
+reading = Subcategory.create(name: "Reading", category_id: book_clubs.id)
+books_drinks = Subcategory.create(name: "Books & Drinks", category_id: book_clubs.id)
+lit = Subcategory.create(name: "Literature", category_id: book_clubs.id)
+women_books = Subcategory.create(name: "Women’s Book Club", category_id: book_clubs.id)
+
+black_entre = Subcategory.create(name: "Black Entrepreneurs", category_id: career_business.id)
+business_intel= Subcategory.create(name: "Business Intelligence", category_id: career_business.id)
+fundraising = Subcategory.create(name: "Fundraising", category_id: career_business.id)
+hispanic_pros = Subcategory.create(name: "Hispanic Professionals", category_id: career_business.id)
+women_entre = Subcategory.create(name: "Women Entrepreneurs", category_id: career_business.id)
+asian_pros = Subcategory.create(name: "Asian Professionals", category_id: career_business.id)
+creative_freelancers = Subcategory.create(name: "Creative Freelancers", category_id: career_business.id)
+design_thinking = Subcategory.create(name: "Design Thinking", category_id: career_business.id)
+digital_marketing = Subcategory.create(name: "Digital Marketing", category_id: career_business.id)
+working_abroad = Subcategory.create(name: "Working Abroad", category_id: career_business.id)
+
 american_hist = Subcategory.create(name: "American History", category_id: edu_learn.id)
 intel_discuss = Subcategory.create(name: "Intellectual Discussion", category_id: edu_learn.id)
 ethics = Subcategory.create(name: "Ethics", category_id: edu_learn.id)

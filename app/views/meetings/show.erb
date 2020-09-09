@@ -1,5 +1,11 @@
 <h2>Meeting Information Page</h2>
 
-<%= @meeting.category %> - <%= @meeting.subcategory %>
+<h3> <%= @meeting.title %> </h3>
 
-<h3> <%= @meeting.title %>
+<%= @meeting.category.name %> - <%= @meeting.subcategory.name %>
+<p> When? <%= @meeting.time %>
+
+<p> <strong> Host: </strong> <%= link_to @meeting.user.full_name, user_path(@meeting.user.id) %> </p>
+
+<p> <strong> Description: </strong> <%= @meeting.description %>
+

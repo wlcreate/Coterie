@@ -1,8 +1,13 @@
-<h1>Select Subcategory:</h1>
+<h1> Create a Meeting! </h1>
 
-
-<%= form_for @meeting, do |f| %>
-<%= f.label :subcategory %> 
-<%= f.collection_select :subcategories, @category.subcategories, :id, :name %><br>
+<%= form_for @meeting do |f| %>
+<%= f.label :subcategory %>
+<%= f.collection_select :subcategory_id, @subcategories, :id, :name %><br>
+<%= f.label :title %>
+<%= f.text_field :title %><br>
+<%= f.label :description %>
+<%= f.text_area :description %><br>
+<%= f.label :time %>
+<%= f.datetime_select(:time, :default => { :hour => 23, :minute => 59 }) %><br>
 <%= f.submit "Create Meeting"%>
 <% end %>
