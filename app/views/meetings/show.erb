@@ -4,8 +4,10 @@
 
 <%= @meeting.category.name %> - <%= @meeting.subcategory.name %>
 <p> When? <%= @meeting.time %>
+<p> Number of Attendees: <%= @meeting.users.count %>
 
 <p> <strong> Host: </strong> <%= link_to @meeting.user.full_name, user_path(@meeting.user.id) %> </p>
 
-<p> <strong> Description: </strong> <%= @meeting.description %>
+<p> <strong> Description: </strong> <%= @meeting.description %> <br>
 
+<%= link_to 'Register', new_registration_path %>

@@ -10,22 +10,15 @@ class MeetingsController < ApplicationController
         @categories = Category.all
     end
 
-    # def get_category
-    #     # category_id = params[:meeting][:id].to_i
-    #     # @category = Category.find(category_id)
-    #     byebug
-    #     redirect_to meeting_form_path(@meeting)
-    # end
-
     def meeting_form
-        byebug
+        # byebug
         @meeting = Meeting.new
         @category = Category.find_by(name: params[:category_id])
         @subcategories = @category.subcategories
     end
 
     def create
-        byebug
+        # byebug
 
         subcategory_id = params[:meeting][:subcategory_id].to_i
         @subcategory = Subcategory.find(subcategory_id)
@@ -45,23 +38,9 @@ class MeetingsController < ApplicationController
         redirect_to meeting_path(@meeting)
     end
 
-    # def create_subcat
-    #     @categories = Category.all
-    #     @subcategories = Subcategory.all
-    #     @meeting = Meeting.create(meeting_params)
-    #     @meeting[:user_id] = @current_user.id
-    #     ##### why isn't meeting being saved in the database???
-    #     ##### once the issue is fixed //next step:
-    #     ##### register the host as an attendee to the meeting
-    #     ##### Registration.new(:meeting_id = @meeting.id, user_id = @current_user.id)
-    #     redirect_to meeting_path(@meeting)
-    # end
-
     def show
+        flash[:meeting_id] = params[:id]
     end
-
-
-
 
     private
 

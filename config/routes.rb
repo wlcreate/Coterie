@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/users/:id', to: "users#show", as: "user" #individual page/profile
   post "/send_form_here", to: "users#handle_login"
   get '/users/:id/edit', to: "users#edit", as: "edit_user" #editing individual profile
-  patch '/users/:id', to: "users#update" #actually updates info
+  patch '/users/:id', to: "users#update" #actually edits/updates info
   delete '/users/:id', to: "users#destroy" #deletes user account
   delete 'logout', to: "users#logout", as: "logout"
 
@@ -16,16 +16,19 @@ Rails.application.routes.draw do
   get '/meetings', to: "meetings#index", as: "meetings" #all the meetings
   get '/meetings/new', to: "meetings#new", as: "new_meeting" #choose category to create meeting
   get '/meetings/new/form', to: "meetings#meeting_form", as: "meeting_form" #form to create meeting
-  post '/meetings', to: "meetings#create" #creates meeting
-  # post '/meetings', to: "meetings#create" #actually creates the meeting
-  #post '/meetings/:id/form', to: "meetings#meeting_form", as: "meeting_form"
+  post '/meetings', to: "meetings#create" #actually creates meeting
   get '/meetings/:id', to: "meetings#show", as: "meeting" #specific meeting info
 
   #categories
   get '/categories', to: "categories#index", as: "categories" #all the categories; our welcome page
-  get '/categories/:id', to: "categories#show", as: "category" 
+  get '/categories/:id', to: "categories#show", as: "category" #shows the categories and related subcategories
 
   #subcategories
   get '/subcategories', to: "subcategories#index", as: "subcategories" #all the subcategories
+  get '/subcategories/:id', to: "subcategories#show", as: "subcategory" #specific subcategory and shows all meetings
+
+  #registrations
+  get '/registrations/new', to: "registrations#new", as: "new_registration" #create registration form
+  post '/registrations', to: "registrations#create" #create the registration
 
 end
