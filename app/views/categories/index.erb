@@ -1,9 +1,10 @@
-<h1> Welcome Page! </h1>
+<h1> What are you interested in? </h1>
 
 <% @categories.map do |category| %>
     <%= category.name %>
-    <% byebug %>
     <ul>
-        <li> <%= category.subcategories %> </li>
+    <% category.subcategories.map do |subcategory| %>
+        <li> <%= subcategory.name %> </li>
+        <% end %>
     </ul>
 <% end %>
