@@ -49,6 +49,7 @@ class MeetingsController < ApplicationController
     end
 
     def show
+        byebug
         flash[:meeting_id] = params[:id]
     end
 
@@ -57,7 +58,6 @@ class MeetingsController < ApplicationController
     end
 
     def update
-        byebug
         @meeting.update(meeting_params)
         redirect_to user_meetings_path(@current_user)
     end

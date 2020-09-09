@@ -3,6 +3,12 @@ class UsersController < ApplicationController
     before_action :get_user, only: [:show, :edit, :update, :destroy]
     skip_before_action :authorized_to_see_page, only: [:login, :handle_login, :new, :create]
 
+    def profile
+        byebug
+        @user = User.find(params[:id])
+        render :profile
+    end
+
     def new
         @user = User.new
         @errors = flash[:errors]

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  root "homepage#home" 
+  # root "homepage#home" 
 
   #users  
   get "/login", to: "users#login", as: "login"
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   patch '/users/:id', to: "users#update" #actually edits/updates info
   delete '/users/:id', to: "users#destroy" #deletes user account
   delete 'logout', to: "users#logout", as: "logout"
+  get '/user/:id/profile', to: "users#profile", as: "profile"
   
   get '/users/:user_id/meetings', to: "meetings#index", as: "user_meetings" #all of a user's meetings (host & attendee)
   get '/users/:user_id/meetings/:id/edit', to: "meetings#edit", as: "edit_meeting" #form for host to update title, desc, time

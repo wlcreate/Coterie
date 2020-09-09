@@ -13,7 +13,7 @@ class User < ApplicationRecord
     validates :first_name, presence: true, length: { minimum: 2 }
     validates :last_name, presence: true, length: { minimum: 2 }
     validates :username, presence: true, uniqueness: true, length: { minimum: 2 }
-    validates :password, presence: true, format: { with: PASSWORD_REQUIREMENTS } #length: { in: 6..20 }
+    validates :password, presence: true, format: { with: PASSWORD_REQUIREMENTS, message: "must be 6 to 20 characters long" } #length: { in: 6..20 }
     validates :bio, length: { maximum: 500 }
 
     def full_name
