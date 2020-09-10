@@ -18,8 +18,10 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">About</a></li>
-          <li><a href="#">Explore Meetings</a></li>
-          <li><a href="#">Host a Meeting</a></li>
+          <li><a href="/users/:user_id/meetings">My Meetings</a></li>
+          <li><a href="/users/:id">My Profile</a></li>
+          <li><a href="/categories">Explore Meetings</a></li>
+          <li><a href="/meetings/new">Host a Meeting</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
               <% if check_if_user_is_logged_in %>

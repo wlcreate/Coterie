@@ -1,7 +1,7 @@
-<h1> Here is all of your meetings! </h1>
+<h2>Hi <%= @current_user.first_name %>, Here are all of your meetings: </h2>
 
 <div>
-    <p> Meetings you are hosting: </p>
+    <p> Meetings I'm hosting: </p>
     <ul>
     <% @meetings.each do |meeting| %>
         <% if meeting.user == @current_user %>
@@ -11,7 +11,7 @@
     </ul>
 </div>
 <div>
-    <p> Meetings you are attending: </p>
+    <p> Meetings I'm attending: </p>
     <ul>
         <% @registrations.each do |registration| %>
         <li> Title: <%= link_to registration.meeting.title, edit_registration_path(@current_user, registration) %> - When? <%= registration.meeting.time %><br></li>

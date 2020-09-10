@@ -67,7 +67,7 @@ class UsersController < ApplicationController
 
     def destroy
         @current_user.destroy
-        redirect_to new_user_path
+        redirect_to home_path
     end
 
     private
