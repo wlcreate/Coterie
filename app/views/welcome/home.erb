@@ -1,0 +1,23 @@
+<html>
+    <body style="background-color:powderblue;" >
+
+
+
+<h1 style="text-align:center"> Welcome to Coterie </h1>
+
+
+<% unless @current_user %>
+    <div class="btn-group">
+        <%= link_to "<button>Login</button>".html_safe, '/login' %><br>
+        <br>
+        <%= link_to "<button>Signup</button>".html_safe, '/signup' %>
+
+
+    </div>
+<% end %>
+
+<% if @current_user %>
+    <%= link_to "<button>Manage Profile</button>".html_safe, user_path(@current_user) %>
+<% end %>
+    
+</html>

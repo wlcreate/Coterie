@@ -21,8 +21,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap-sass'
+# gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'activerecord-reset-pk-sequence'
 
