@@ -17,6 +17,15 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap. 
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+h2 {
+    font-size: 40px;
+    font-family: Bebas Neue;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
 
 body {
     font-family: Arial;
@@ -62,7 +71,7 @@ body {
 }
 
 .career {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1497215842964-222b430dc094?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&w=200&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -70,7 +79,7 @@ body {
 }
 
 .education {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&w=200&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -78,7 +87,7 @@ body {
 }
 
 .fashion {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -86,7 +95,7 @@ body {
 }
 
 .food {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1564759191971-5f7a21a3d42d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -94,7 +103,7 @@ body {
 }
 
 .game {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1588586767655-826cafa4a787?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1056&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -102,7 +111,7 @@ body {
 }
 
 .health {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -110,7 +119,7 @@ body {
 }
 
 .hobbie {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1584992236310-6edddc08acff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -119,7 +128,7 @@ body {
 
 
 .lgbt {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1561612217-e5147162fd31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1443&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -128,7 +137,7 @@ body {
 
 
 .language {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1518169998863-07b9ca9294ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -137,7 +146,7 @@ body {
 
 
 .politics {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1569225022281-f652746229fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -146,7 +155,7 @@ body {
 
 
 .movie {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1040&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -155,7 +164,7 @@ body {
 
 
 .music {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -164,7 +173,7 @@ body {
 
 
 .outdoor {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1521336575822-6da63fb45455?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
@@ -173,7 +182,7 @@ body {
 
 
 .parent {
-    background: url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=200&q=80");
+    background: url("https://images.unsplash.com/photo-1543342384-1f1350e27861?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
     box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
