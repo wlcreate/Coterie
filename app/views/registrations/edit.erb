@@ -2,7 +2,7 @@
 
 <p> Title: <%= @registration.meeting.title %> </p>
 <p> When? <%= @registration.meeting.datetime %> </p>
-<p> Host: <%= @registration.meeting.user.full_name %> </p>
+<p> Host: <%= link_to @registration.meeting.user.full_name, profile_path(@registration.meeting.user.id) %> </p>
 <p> <%= @registration.meeting.description %> </p>
 
 <%= button_to 'Cancel My Registration 😭', { controller: :registrations, action: :destroy, id: @registration.id }, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,7 +1,10 @@
-<h1> Before we get started, select a category! </h1>
 
+<div class="container-fluid">
+<h1> Before we get started, select a category!</h1>
+<br><br>
 <%= form_tag("/meetings/new/form", :method => "get") do %>
 <%= label_tag :category %>
-<%= select_tag(:category_id, options_for_select(@categories.map {|category| category.name})) %><br>
+<%= select_tag(:category_id, options_for_select(@categories.map {|category| category.name})) %><br><br>
 <%= submit_tag("Next")%>
 <% end %>
+</div>
