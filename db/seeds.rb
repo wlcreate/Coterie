@@ -19,7 +19,8 @@ Category.reset_pk_sequence
 ###Users###
 
 anna = User.create(first_name: "Anna", last_name: "Kim", username: "iannakim", password: "abc123", bio: "I am Anna")
-wavey = User.create(first_name: "Waverley", last_name: "Leung", username: "wavey", password: "123abc", bio: "I am Waverley")
+wavey = User.create(first_name: "Waverley", last_name: "Leung", username: "wavey", password: "abc123", bio: "I am Waverley")
+katherine = User.create(first_name: "Katherine", last_name: "Zarudnaya", username: "elronia", password: "abc123", bio: "I am Katherine")
 
 #########################################################################################################
 
