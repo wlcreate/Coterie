@@ -4,7 +4,6 @@ class UsersController < ApplicationController
     skip_before_action :authorized_to_see_page, only: [:login, :handle_login, :new, :create]
 
     def profile
-        byebug
         @user = User.find(params[:id])
         render :profile
     end
@@ -27,13 +26,15 @@ class UsersController < ApplicationController
 
 
     def login
+        # byebug
         @error = flash[:error]
     end
 
 
     def handle_login
-        @user = User.find_by(username: params[:username])
-        if @user && @user.authenticate(params[:password])
+        # byebug
+        @user = User.find_by(username: params[:user][:username])
+        if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
             redirect_to user_meetings_url(@user)
         else
