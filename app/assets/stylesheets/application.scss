@@ -15,7 +15,26 @@
  */
 
  // Custom bootstrap variables must be set or imported *before* bootstrap. 
- @import "bootstrap";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+body {
+    font-family: Arial;
+}
+
+.navbar {
+    background-color: #FFF;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
+    font-size: 32px;
+}
+
+.navbar-header {
+    font-family: 'Berkshire Swash', cursive;
+}
+
 .signup_link{
     font-size: 20px;
 }

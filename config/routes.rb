@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/signup', to: "users#new", as: "signup" #form to create a user
   post '/users', to: "users#create" #actually create users
   get '/users/:id', to: "users#show", as: "user" #individual page/profile
-  post "/send_form_here", to: "users#handle_login"
+  post "/send_form_here", to: "users#handle_login", as: "handle_login"
   get '/users/:id/edit', to: "users#edit", as: "edit_user" #editing individual profile
   patch '/users/:id', to: "users#update" #actually edits/updates info
   delete '/users/:id', to: "users#destroy" #deletes user account

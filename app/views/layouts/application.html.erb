@@ -10,37 +10,50 @@
   </head>
 
  
-    <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Coterie</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">About</a></li>
-      <li><a href="#">Explore Meetings</a></li>
-      <li><a href="#">Host a Meeting</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">coterie</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">About</a></li>
+          <li><a href="#">Explore Meetings</a></li>
+          <li><a href="#">Host a Meeting</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+              <% if check_if_user_is_logged_in %>
+              <li>
+                Logged In as: <%= @current_user.full_name %>
+                <%= link_to "Log Out", logout_path, method: :delete%>
+              </li>
+              <% else %>
+              <li>
+                <%= link_to "Sign Up", '/signup' %>
+              </li>
+              <li>
+                <%= link_to "Log-In", login_path %>
+              </li>
+              <% end %>
+          <!-- <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+        </ul>
+      </div>
+    </nav>
 
-  <% if check_if_user_is_logged_in %>
+<!--     <% if check_if_user_is_logged_in %>
     <nav>
       Logged In as: <%= @current_user.full_name %>
       <%= button_to "Log Out", logout_path, method: :delete%>
     </nav>
-  <% else %>
+    <% else %>
     <nav>
       <%= link_to "Log-In", login_path %>
-    </nav>
-  <% end %>
+      </nav>
+    <% end %> -->
 
+    <%= yield %>
+    
 
-      <%= yield %>
-
-    </body>
+  </body>
 </html>
