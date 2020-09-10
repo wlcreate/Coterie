@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     skip_before_action :authorized_to_see_page, only: [:login, :handle_login, :new, :create]
 
     def profile
-        byebug
+        # byebug
         @user = User.find(params[:id])
         render :profile
     end

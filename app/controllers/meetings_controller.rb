@@ -11,8 +11,6 @@ class MeetingsController < ApplicationController
         #     if meeting.user == @current_user
         #         then list the meeting title & time
         # 2. need to go through a specific meeting to find the attendees of the meeting
-
-
         @meetings = Meeting.all
         @registrations = @current_user.registrations
     end
@@ -30,7 +28,6 @@ class MeetingsController < ApplicationController
 
     def create
         # byebug
-
         subcategory_id = params[:meeting][:subcategory_id].to_i
         @subcategory = Subcategory.find(subcategory_id)
         @category = @subcategory.category
@@ -49,7 +46,7 @@ class MeetingsController < ApplicationController
     end
 
     def show
-        byebug
+        # byebug
         flash[:meeting_id] = params[:id]
     end
 
