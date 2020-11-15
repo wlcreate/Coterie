@@ -3,22 +3,22 @@ Coterie is a web application that allows users to join and host virtual meetings
 The inspiration of this app came during the time of COVID where it was difficult for people to gather in-person. Coterie provides a safe space to still meet new people and stay connected.
 The word *Coterie*  means a small group of people with shared interests or tastes.
 
-## Features
+## User Features
 
 ### Password Authentication
- * Validate users using sessions
- * Authenticate user password with BCrypt
+ * Validate current users and keeps them logged in using sessions
+ * Authenticate users' passwords with BCrypt
 
-### CRUD Operation
- User (Attendee) can to:
+### CRUD Operations
+ Users (the Attendee) can:
   * log into the application
   * create an account
-  * see an error if their account input is wrong
+  * see an error message if their account input is wrong
   * register for a meeting
   * view their meetings
   * browse available meetings
 
- User (Host) will be able to:
+ User (the Host) can:
   * log into the application
   * create a meeting
   * change their meetings
@@ -39,11 +39,12 @@ The word *Coterie*  means a small group of people with shared interests or taste
 ## Tools
  * Bootstrap
  * BCrypt
+ * Custom CSS
 
 ## Build Status
- Work in Progress!
+ * This project is complete for the purpose of the project deadline.
 
-## Next Steps
+## Future Features
  * Improve design elements (look of buttons, background image, text manipulation)
  * Create a logo
  * Add About page
