@@ -7,7 +7,7 @@ class Meeting < ApplicationRecord
 
 
   def datetime
-    self.time.to_formatted_s(:rfc822) 
+    self.time.strftime("%A %b %d, %Y %H:%M")
   end
 
 
