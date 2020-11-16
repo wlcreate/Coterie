@@ -50,6 +50,10 @@ The word *Coterie*  means a small group of people with shared interests or taste
  * BCrypt
  * Custom CSS
 
+## Screenshots
+<img src='./image/screenshot1.png'> </img>
+<img src='./image/screenshot2.png'> </img>
+
 ## Build Status
  * This project is complete for the purpose of the project deadline.
 
