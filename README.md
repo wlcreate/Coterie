@@ -3,6 +3,15 @@ Coterie is a web application that allows users to join and host virtual meetings
 The inspiration of this app came during the time of COVID where it was difficult for people to gather in-person. Coterie provides a safe space to still meet new people and stay connected.
 The word *Coterie*  means a small group of people with shared interests or tastes.
 
+## Getting started
+1. Clone down this repo into local machine --git clone
+2. cd into 'Coterie' application
+3. Run 'bundle install' to install all required dependencies
+4. Run 'rails db:migrate' to set up the tables for the database
+5. Run 'rails db:seed' load data
+6. Run 'rails s' to start the server
+7. Open the browser and go to 'http://localhost:3000/' to start the app!
+
 ## User Features
 
 ### Password Authentication
