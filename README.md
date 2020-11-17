@@ -6,10 +6,10 @@ The word *Coterie*  means a small group of people with shared interests or taste
 ## Getting started
 1. Clone down this repo onto your local machine --git clone
 2. cd into 'Coterie' application
-3. Run 'bundle install' to install all required dependencies
-4. Run 'rails db:migrate' to set up the tables for the database
-5. Run 'rails db:seed' load data
-6. Run 'rails s' to start the server
+3. Run ```bundle install``` to install all required dependencies
+4. Run ```rails db:migrate``` to set up the tables for the database
+5. Run ```rails db:seed``` load data
+6. Run ```rails s``` to start the server
 7. Open the browser and go to 'http://localhost:3000/' to start the app!
 
 ## User Features
