@@ -4,7 +4,7 @@ The inspiration of this app came during the time of COVID where it was difficult
 The word *Coterie*  means a small group of people with shared interests or tastes.
 
 ## Getting started
-1. Clone down this repo into local machine --git clone
+1. Clone down this repo onto your local machine --git clone
 2. cd into 'Coterie' application
 3. Run 'bundle install' to install all required dependencies
 4. Run 'rails db:migrate' to set up the tables for the database
