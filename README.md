@@ -34,7 +34,7 @@ The word *Coterie*  means a small group of people with shared interests or taste
   * cancel the meeting
 
 ### Active Record Associations
- * There are 5 models that have the following associations ```has_many, belongs_to and has_many, through: ```
+ * There are 5 models that have the following associations ```has_many```, ```belongs_to``` and ```has_many, through: ```
 
 ## Domain Model
 <img src='./image/domainmodel.png'> </img>
