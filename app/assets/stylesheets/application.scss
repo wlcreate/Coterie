@@ -19,6 +19,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+.meetings {
+    margin-left: 15%;
+    margin-top: 5%;
+    background-color: #b4ffd5;
+    padding: 40px;
+    padding-left: 40px;
+    width: 900px;
+}
+
+.categories {
+    margin-left: 5%;
+    margin-top: 5%;
+    display: table;
+    clear: both;
+}
+
+.table {
+    display: flex;
+    width: 90%;
+}
+tr {
+    width: 100%;
+}
+
+td {
+    border: solid;
+    border-width: thin;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+  }
+
+.title {
+    font-size: 50px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.user-show {
+    margin-left: 20%;
+    margin-top: 5%;
+    background-color: #f2e5e5;
+    padding: 40px;
+    padding-left: 40px;
+    width: 700px;
+}
+
+.buttonTo {
+    margin-right: 1%;
+    float: right;
+    background-color: #ffffff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.buttonTo:hover {
+    color: #FFFFFF;
+    background-color: #ce4820;
+    // transition: all 0.2s;
+}
+
 h2 {
     font-size: 45px;
     font-family: Bebas Neue;
@@ -30,18 +94,22 @@ h2 {
 
 body {
     font-family: Arial;
-    background-image: url("https://images.unsplash.com/photo-1536882240095-0379873feb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
+    font-size: 18px;
+
+    // background-image: url("https://images.unsplash.com/photo-1536882240095-0379873feb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
     // box-shadow: inset 0 0 0 200px rgba(50,50,50,0.5);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right;
+
 }
 
 
 
 .navbar {
     background-color: #FFF;
+    font-size: 16px;
 }
 
 .navbar-default .navbar-brand {

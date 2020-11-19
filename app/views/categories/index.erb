@@ -1,14 +1,24 @@
 
-<div class="container-fluid">
-<h2> What are you interested in? </h2>
+<div class="categories">
 
-<% @categories.map do |category| %>
-    <h3><%= category.name %></h3>
-    <ul>
-    <% category.subcategories.map do |subcategory| %>
-        <li> <%= link_to subcategory.name, subcategory_path(subcategory) %> </li>
-        <% end %>
-    </ul>
-<% end %>
+    <div class="title">
+        <p> What are you interested in? </p>
+    </div>
+
+    <div class="table">
+        
+            <% @categories.map do |category| %>
+            <table>
+                <tr><th><h3><%= category.name %></h3></th></tr>
+
+                        <% category.subcategories.each do |subcategory| %>
+                            <tr><td><%= link_to subcategory.name, subcategory_path(subcategory) %> </td></td>
+                            <% end %>
+            </table>
+            <% end %>
+        
+    </div>
+
+
 </div>
 
