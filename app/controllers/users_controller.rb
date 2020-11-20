@@ -33,10 +33,7 @@ class UsersController < ApplicationController
 
 
     def handle_login
-<<<<<<< HEAD
         # byebug
-=======
->>>>>>> 41e316fda190eb93061ab19f4144b0cbfacf1faa
         @user = User.find_by(username: params[:user][:username])
         if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
