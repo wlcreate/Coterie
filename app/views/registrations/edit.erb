@@ -1,8 +1,11 @@
-<h1> This is your registration! </h1>
 
-<p> Title: <%= @registration.meeting.title %> </p>
-<p> When? <%= @registration.meeting.datetime %> </p>
-<p> Host: <%= link_to @registration.meeting.user.full_name, profile_path(@registration.meeting.user.id) %> </p>
-<p> <%= @registration.meeting.description %> </p>
+<div class="user-show">
+    <h1> This is your registration! </h1>
 
-<%= button_to 'Cancel My Registration 😭', { controller: :registrations, action: :destroy, id: @registration.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <p><b>Title:</b> <%= @registration.meeting.title %> </p>
+    <p><b>When?</b> <%= @registration.meeting.datetime %> </p>
+    <p><b>Host:</b> <%= link_to @registration.meeting.user.full_name, profile_path(@registration.meeting.user.id) %> </p>
+    <p><b>Description:</b> <%= @registration.meeting.description %> </p>
+
+    <%= button_to 'Cancel My Registration 😭', { controller: :registrations, action: :destroy, id: @registration.id }, method: :delete, data: { confirm: 'Are you sure?' }, :class => "buttonTo" %>
+</div>
