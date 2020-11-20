@@ -5,9 +5,14 @@ Coterie is a web application that allows users to join and host virtual meetings
 The inspiration of this app came during the time of COVID where it was difficult for people to gather in-person. Coterie provides a safe space to still meet new people and stay connected.
 The word *Coterie*  means a small group of people with shared interests or tastes.
 
-## Take a Look 📷
-<img src='./image/screenshot1.png'> </img>
-<img src='./image/screenshot2.png'> </img>
+## Getting started
+1. Clone down this repo onto your local machine --git clone
+2. cd into 'Coterie' application
+3. Run ```bundle install``` to install all required dependencies
+4. Run ```rails db:migrate``` to set up the tables for the database
+5. Run ```rails db:seed``` load data
+6. Run ```rails s``` to start the server
+7. Open the browser and go to 'http://localhost:3000/' to start the app!
 
 ## User Features
 
@@ -40,7 +45,7 @@ The word *Coterie*  means a small group of people with shared interests or taste
  * Open the browser and go to 'http://localhost:3000/' to start the app!
 
 ### Active Record Associations
- * There are 5 models that have the following associations ```has_many, belongs_to and has_many, through: ```
+ * There are 5 models that have the following associations ```has_many```, ```belongs_to``` and ```has_many, through: ```
 
 ## Domain Model
 <img src='./image/domainmodel.png'> </img>
@@ -57,7 +62,7 @@ The word *Coterie*  means a small group of people with shared interests or taste
  * Custom CSS
 
 ## Build Status
- * This project is complete for the purpose of the project deadline.
+ * This project was completed in 6 days for the purpose of the project presentation.
 
 ## Future Features
  * Improve design elements (look of buttons, background image, text manipulation)
@@ -80,4 +85,3 @@ The word *Coterie*  means a small group of people with shared interests or taste
   * Annie Zheng
   * Isabel K. Lee
   * the Code Bender Cohort
-
