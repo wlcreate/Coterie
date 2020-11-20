@@ -1,4 +1,5 @@
 class RegistrationsController < ApplicationController
+    
     before_action :get_registration, only: [:show, :edit, :update, :destroy]
 
     def new

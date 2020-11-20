@@ -18,8 +18,10 @@ Category.reset_pk_sequence
 
 ###Users###
 
-anna = User.create(first_name: "Anna", last_name: "Kim", username: "iannakim", password: "abc123", bio: "I am Anna")
-wavey = User.create(first_name: "Waverley", last_name: "Leung", username: "wavey", password: "123abc", bio: "I am Waverley")
+demo = User.create(first_name: "Jane", last_name: "Smith", username: "demo", password: "abc123", bio: "I am a demo! You can write something about yourself by clicking the edit button.")
+demo1= User.create(first_name: "Dwight", last_name: "Schrute", username: "demo1", password: "abc123", bio: "Dwight Kurt Schrute is a character in The Office portrayed by Rainn Wilson. He was a salesman and the assistant to the regional manager at the paper distribution company Dunder Mifflin before his promotion to regional manager in the final season")
+
+
 
 #########################################################################################################
 
@@ -276,5 +278,28 @@ short_stories = Subcategory.create(name: "Short Stories", category_id: writing.i
 short_stories_wr = Subcategory.create(name: "Short Story Writing", category_id: writing)
 wr_pra = Subcategory.create(name: "Writing Practice", category_id: writing)
 wr_work = Subcategory.create(name: "Writing Workshops", category_id: writing.id)
+
+
+
+meeting1 = Meeting.create!(title: "Sushi lovers Unite! 🍣 ", description: "Do you love sushi? Do you dream about sushi all the time? Would you rather eat sushi everyday over everything else? Then this is the meeting for you. Come join other sushi lovers and share your favorite sushi rolls!" , time: DateTime.new(2020,11,20,9,34), subcategory_id: 53, category_id: 6,user_id: 2)
+meeting2 = Meeting.create!(title: "Let's Make Sushi for Beginners!", description: "Tired of waiting on a long line to eat crappy overpriced NYC sushi? You can make your own fresh sushi at home! Join this meeting and learn how to make basic sushi rolls. (Materials not included)" , time: DateTime.new(2020,10,14,7,30), subcategory_id: 53, category_id: 6, user_id: 2)
+meeting3 = Meeting.create!(title: "OMAKASE - Is It Worth the Hype?", description: "If you have never heard of OMAKASE, this is a great way to learn from others. Let's talk OMAKASE, the newest sushi eating experience." , time: DateTime.new(2020,12,21,8,30), subcategory_id: 53, category_id: 6, user_id: 2)
+meeting4 = Meeting.create!(title: "Mixology 101 - BYOD! 🍹", description: "Do you like experimenting with new things? Come learn about the art of mixing drinks from others and create your own sexy cocktail!" , time: DateTime.new(2020,12,24,8,30), subcategory_id: 51, category_id: 6, user_id: 2)
+meeting5 = Meeting.create!(title: "Let's hash it out - 🍻 happy hour venting session for those who need it 🍸", description: "Exactly what the title says. Come ready to vent. We're all ears. No judging here." , time: DateTime.new(2020,11,16,7,30), subcategory_id: 51, category_id: 6, user_id: 2)
+
+
+
+
+meeting6 = Meeting.create!(title: "Pasta Making 101", description: "You'll become the next Master Chef by learning the art of pasta making!" , time: DateTime.new(2020,11,4,5,30), subcategory_id: 55, category_id: 6, user_id: 1)
+meeting7 = Meeting.create!(title: "Learn to Make French Macarons!", description: "Learn to make one of the most delicious french desserts of all time - Macarons!" , time: DateTime.new(2020,9,12,4,30), subcategory_id: 55, category_id: 6, user_id: 1)
+meeting8 = Meeting.create!(title: "Cupcakes and Sprinkles for Sweet Tooth Peeps!", description: "Bring out the inner child in you! We'll make everything from red velvet to chocolate, to caramel fudge cupcakes." , time: DateTime.new(2020,9,18,6,30), subcategory_id: 55, category_id: 6, user_id: 1)
+
+
+
+reg1 = Registration.create!(user_id: 1, meeting_id: 1)
+reg2 = Registration.create!(user_id: 1, meeting_id: 2)
+reg3 = Registration.create!(user_id: 1, meeting_id: 3)
+reg4 = Registration.create!(user_id: 1, meeting_id: 4)
+reg5 = Registration.create!(user_id: 1, meeting_id: 5)
 
 puts "🦄🦄🦄🦄🦄🦄🦄"

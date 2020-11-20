@@ -1,13 +1,18 @@
-<h2>Meeting Information Page</h2>
 
-<h3> <%= @meeting.title %> </h3>
 
-<%= @meeting.category.name %> - <%= @meeting.subcategory.name %>
-<p> When? <%= @meeting.time %>
-<p> Number of Attendees: <%= @meeting.users.count %>
+<div class="container-fluid">
+
+<h2><strong><%= @meeting.title %> </strong> </h2>
+<p><strong>Category: </strong><%= @meeting.category.name %></p>
+<p><strong>Subcategory: </strong><%= @meeting.subcategory.name %></p>
+<p><strong>When?</strong> <%= @meeting.datetime%></p>
+<p><strong>Number of Attendees: </strong> <%= @meeting.users.count %></p>
 
 <p> <strong> Host: </strong> <%= link_to @meeting.user.full_name, profile_path(@meeting.user.id) %> </p>
 
 <p> <strong> Description: </strong> <%= @meeting.description %> <br>
 
-<%= link_to 'Register', new_registration_path %>
+
+<p><a href="/registrations/new" class="button">Want to Register?</a></p>
+
+</div>

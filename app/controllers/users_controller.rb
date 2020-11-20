@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     skip_before_action :authorized_to_see_page, only: [:login, :handle_login, :new, :create]
 
     def profile
+        # byebug
         @user = User.find(params[:id])
         render :profile
     end
@@ -32,7 +33,10 @@ class UsersController < ApplicationController
 
 
     def handle_login
+<<<<<<< HEAD
         # byebug
+=======
+>>>>>>> 41e316fda190eb93061ab19f4144b0cbfacf1faa
         @user = User.find_by(username: params[:user][:username])
         if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
@@ -68,7 +72,7 @@ class UsersController < ApplicationController
 
     def destroy
         @current_user.destroy
-        redirect_to new_user_path
+        redirect_to home_path
     end
 
     private
