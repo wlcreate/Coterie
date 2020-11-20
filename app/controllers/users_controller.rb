@@ -27,11 +27,13 @@ class UsersController < ApplicationController
 
 
     def login
+        # byebug
         @error = flash[:error]
     end
 
 
     def handle_login
+        # byebug
         @user = User.find_by(username: params[:user][:username])
         if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
