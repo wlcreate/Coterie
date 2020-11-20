@@ -1,14 +1,30 @@
-<h1> Edit a Meeting! </h1>
 
-<%= form_for([@meeting.user, @meeting]) do |f| %>
-<%= f.hidden_field :user_id, :value => @current_user.id %>
-<%= f.label :title %>
-<%= f.text_field :title %><br>
-<%= f.label :description %>
-<%= f.text_area :description %><br>
-<%= f.label :time %>
-<%= f.datetime_select(:time, :default => { :hour => 23, :minute => 59 }) %><br>
-<%= f.submit "Update Meeting"%>
-<% end %>
 
-<%= button_to 'Delete Meeting', { controller: :meetings, action: :destroy, id: @meeting.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="user-show">
+
+        <h2> Edit a Meeting </h2>
+
+        <%= form_for([@meeting.user, @meeting]) do |f| %>
+        <%= f.hidden_field :user_id, :value => @current_user.id %>
+      
+      <div class="input-group">
+          <%= f.label "Title:" %><br>
+          <%= f.text_field :title, :class => "text-field" %><br>
+      </div>
+
+      <div class="input-group">
+          <%= f.label "Description:" %><br>
+          <%= f.text_area :description, :class => "text-area" %><br>
+      </div>
+
+      <div class="input-group">
+          <%= f.label "Time:" %><br>
+          <%= f.datetime_select(:time, :default => { :hour => 23, :minute => 59 }) %><br>
+      </div>
+
+          <%= f.submit "Update Meeting", :class => "buttonTo" %>
+        <% end %><br><br>
+
+        <%= button_to 'Delete Meeting', { controller: :meetings, action: :destroy, id: @meeting.id }, method: :delete, data: { confirm: 'Are you sure?' }, :class => "buttonTo" %>
+    
+</div>

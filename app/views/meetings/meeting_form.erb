@@ -1,13 +1,31 @@
-<h1> Create a Meeting! </h1>
 
-<%= form_for @meeting do |f| %>
-<%= f.label :subcategory %>
-<%= f.collection_select :subcategory_id, @subcategories, :id, :name %><br>
-<%= f.label :title %>
-<%= f.text_field :title %><br>
-<%= f.label :description %>
-<%= f.text_area :description %><br>
-<%= f.label :time %>
-<%= f.datetime_select(:time, :default => { :hour => 23, :minute => 59 }) %><br>
-<%= f.submit "Create Meeting"%>
-<% end %>
+<div class="user-show">
+
+  <h2> Create a Meeting! 😃 </h2>
+
+    <%= form_for @meeting do |f| %>
+
+  <div class="input-group">
+      <%= f.label "Sub-category:" %><br>
+      <%= f.collection_select :subcategory_id, @subcategories, :id, :name %><br>
+  </div>
+
+  <div class="input-group">
+      <%= f.label "Title:" %><br>
+      <%= f.text_field :title, :class => "text-field" %><br>
+  </div>
+
+  <div class="input-group">
+      <%= f.label "Description:" %><br>
+      <%= f.text_area :description, :class => "text-area" %><br>
+  </div>
+
+  <div class="input-group">
+      <%= f.label "Time:" %>
+      <%= f.datetime_select(:time, :default => { :hour => 23, :minute => 59 }) %><br>
+  </div>
+
+      <%= f.submit "Create Meeting"%>
+      <% end %>
+
+</div>
