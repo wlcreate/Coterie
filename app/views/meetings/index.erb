@@ -1,9 +1,9 @@
 <div class="meetings">
 
-        <h2>Hi <%= @current_user.first_name %>, Here are all of your meetings: </h2>
+        <h2>🗓 Hi <%= @current_user.first_name %>, Here are all of your meetings: </h2>
 
         <div>
-            <h3> Meetings I'm hosting: </h3>
+            <h3>👋🏻 I'm hosting: </h3>
             <ul>
             <% @meetings.each do |meeting| %>
                 <% if meeting.user == @current_user %>
@@ -13,7 +13,7 @@
             </ul>
         </div>
         <div>
-            <h3> Meetings I'm attending: </h3>
+            <h3>👤 I'm attending: </h3>
             <ul>
                 <% @registrations.each do |registration| %>
                 <li> Title: <%= link_to registration.meeting.title, edit_registration_path(@current_user, registration) %> - When? <%= registration.meeting.datetime %><br></li>
