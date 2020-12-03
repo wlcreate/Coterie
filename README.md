@@ -70,14 +70,7 @@ The word *Coterie*  means a small group of people with shared interests or taste
 
 ## Contributors
  * [Anna Kim](https://github.com/iannakim)
- * [Ekaterina Zarudnaya](https://github.com/Elronia)
  * [Waverley Leung](https://github.com/wlcreate)
+ * [Ekaterina Zarudnaya](https://github.com/Elronia)
  
-## Acknowledgements
- We would like to thank:
-  * Sylwia Vargas
-  * Eric Kim
-  * Annie Zheng
-  * Isabel K. Lee
-  * the Code Bender Cohort
 
