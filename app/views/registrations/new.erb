@@ -1,12 +1,15 @@
-<h1> Registration Form </h1>
 
-<p> Title: <%= @meeting.title %> </p>
-<p> When? <%= @meeting.datetime %> </p>
-<p> Hosted by: <%= @meeting.user.full_name %> </p>
-<p> Description: <%= @meeting.description %> </p>
+<div class="user-show">
+    <h1> Registration Form </h1>
 
-<%= form_for @registration do |f| %>
-    <%= f.hidden_field :meeting_id, :value => @meeting.id %>
-    <%= f.hidden_field :user_id, :value => @current_user.id %>
-    <%= f.submit "Confirm Registeration" %>
-<% end %>
+    <p><b> Title:</b> <%= @meeting.title %> </p>
+    <p><b> When?</b> <%= @meeting.datetime %> </p>
+    <p><b> Hosted by:</b> <%= @meeting.user.full_name %> </p>
+    <p><b> Description:</b> <%= @meeting.description %> </p>
+
+    <%= form_for @registration do |f| %>
+        <%= f.hidden_field :meeting_id, :value => @meeting.id %>
+        <%= f.hidden_field :user_id, :value => @current_user.id %>
+        <%= f.submit "Confirm Registeration" %>
+    <% end %>
+</div>

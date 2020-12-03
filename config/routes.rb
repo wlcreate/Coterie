@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   #users  
   get "/login", to: "users#login", as: "login"
   get '/signup', to: "users#new", as: "signup" #form to create a user
-  post '/users', to: "users#create" #actually create users
+  post '/signup', to: "users#create" #actually create users
   get '/users/:id', to: "users#show", as: "user" #individual page/profile
   post "/send_form_here", to: "users#handle_login", as: "handle_login"
   get '/users/:id/edit', to: "users#edit", as: "edit_user" #editing individual profile
