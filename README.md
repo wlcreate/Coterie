@@ -34,15 +34,6 @@ The word *Coterie*  means a small group of people with shared interests or taste
   * create a meeting
   * change their meetings
   * cancel the meeting
-  
- ## Set Up
- * Clone down this repo into local machine --git clone <git repository>
- * CD into 'Coterie' application
- * Run 'bundle install' to install all required dependencies
- * Run 'rails db:migrate' to set up the tables for the database
- * Run 'rails db:seed' load data
- * Run 'rails s' to start the server
- * Open the browser and go to 'http://localhost:3000/' to start the app!
 
 ### Active Record Associations
  * There are 5 models that have the following associations ```has_many```, ```belongs_to``` and ```has_many, through: ```
