@@ -5,7 +5,7 @@ The definition of *Coterie* is a small group of people with shared interests or 
 
 [Link to video demo](https://youtu.be/FBEOMOhLc54)
 
-Check out Waverley's Medium article on how she debugged [Letting the User Select a Subcategory Based on Its Category in a Form](https://medium.com/swlh/letting-the-user-select-a-subcategory-based-on-its-category-in-a-form-bc786e598dd4)
+Check out Waverley's [Medium article](https://medium.com/swlh/letting-the-user-select-a-subcategory-based-on-its-category-in-a-form-bc786e598dd4) on how she debugged for a form, letting the user select a subcategory based on its category
 
 ## Getting started
 1. Clone down this repo onto your local machine --git clone
