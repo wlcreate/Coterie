@@ -3,9 +3,9 @@
 Coterie is a web application that allows users to join and host virtual meetings to connect people with shared interests. The inspiration of this app came during the time of [COVID-19](https://www.cdc.gov/coronavirus/2019-ncov/index.html) where it's been difficult for people to gather in-person. Coterie provides a safe space to stay connected and continue to meet new people.
 The definition of *Coterie* is a small group of people with shared interests or tastes.
 
-[Link to video demo](https://youtu.be/FBEOMOhLc54)
-
 Check out Waverley's Medium article on how she debugged [Letting the User Select a Subcategory Based on Its Category in a Form](https://medium.com/swlh/letting-the-user-select-a-subcategory-based-on-its-category-in-a-form-bc786e598dd4)
+
+[Link to video demo](https://youtu.be/FBEOMOhLc54)
 
 ## Getting started
 1. Clone down this repo onto your local machine --git clone
