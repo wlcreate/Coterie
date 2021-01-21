@@ -25,7 +25,7 @@ gem 'bootstrap-sass'
 # gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'activerecord-reset-pk-sequence'
-
+gem 'font-awesome-sass', '~> 4.6.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
