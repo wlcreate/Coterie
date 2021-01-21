@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   #homepage
   root "welcome#home" 
-  get "welcome/home", to: "welcome#home", as: "home"
+  get "/", to: "welcome#home", as: "home"
 
   #users  
   get "/login", to: "users#login", as: "login"
