@@ -1,12 +1,13 @@
 # Coterie
 
-Coterie is a web application that allows users to host and join virtual meetings to connect people with shared interests.
-The inspiration of this app came during the time of COVID where it was difficult for people to gather in-person. Coterie provides a safe space to still meet new people and stay connected. The word *Coterie*  means a small group of people with shared interests or tastes.
+Coterie is a web application that allows users to join and host virtual meetings to connect people with shared interests. The inspiration of this app came during the time of [COVID-19](https://www.cdc.gov/coronavirus/2019-ncov/index.html) where it's been difficult for people to gather in-person. Coterie provides a safe space to stay connected and continue to meet new people. The definition of *Coterie* is a small group of people with shared interests or tastes.
 
-Coterie is a web application that allows users to join and host virtual meetings to connect people with shared interests. The inspiration of this app came during the time of [COVID-19](https://www.cdc.gov/coronavirus/2019-ncov/index.html) where it's been difficult for people to gather in-person. Coterie provides a safe space to stay connected and continue to meet new people.
-The definition of *Coterie* is a small group of people with shared interests or tastes.
+## Want to See More?
+Interact with the [live site](https://guarded-escarpment-91959.herokuapp.com) and/or watch the [video demo](https://youtu.be/FBEOMOhLc54)! You can log in with:
+* username: demo & password: abc123
+* username: demo1 & password: abc123
 
-[Link to video demo](https://youtu.be/FBEOMOhLc54)
+Don't forget to check out Waverley's [Medium article](https://medium.com/swlh/letting-the-user-select-a-subcategory-based-on-its-category-in-a-form-bc786e598dd4) on how she debugged for a form letting the user select a subcategory based on its category
 
 ## Getting started
 1. Clone down this repo onto your local machine --git clone
@@ -56,7 +57,7 @@ The definition of *Coterie* is a small group of people with shared interests or 
  * Custom CSS
 
 ## Build Status
- * This project was completed in 5 days for the purpose of the project presentation.
+ * This project was completed in 6 days for the purpose of the project presentation.
 
 ## Future Features
  * Improve design elements (look of buttons, background image, text manipulation)
@@ -69,10 +70,9 @@ The definition of *Coterie* is a small group of people with shared interests or 
 
 ## Contributors
  * [Anna Kim](https://github.com/iannakim)
- * [Waverley Leung](https://github.com/wlcreate)
  * [Ekaterina Zarudnaya](https://github.com/Elronia)
+ * [Waverley Leung](https://github.com/wlcreate)
  
-
 ## Acknowledgements
  We would like to thank:
   * Sylwia Vargas
