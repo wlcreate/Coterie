@@ -1,4 +1,8 @@
 # Coterie
+<<<<<<< HEAD
+=======
+Check out the <a href="https://youtu.be/nC7PQP0Lf2o"> demo here </a> 🎬
+>>>>>>> d0eb60b2c62f8b08b67b9b3b0384ddf5069985ee
 
 <<<<<<< HEAD
 Coterie is a web application that allows users to host and join virtual meetings to connect people with shared interests.
